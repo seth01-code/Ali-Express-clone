@@ -1,0 +1,401 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: #f15a22;
+  border-radius: 0 !important;
+  border: 0.1rem solid #000 !important;
+}
+
+.btn-black:hover {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.4rem;
+  color: #f15a22;
+  position: relative;
+  bottom: 7rem;
+  right: 8rem;
+}
+
+.clear-cart {
+  width: 13rem;
+  margin-left: 10rem;
+}
+
+.clear-cart:hover {
+  transition: all 1s linear;
+}
+
+.list {
+  position: relative;
+  left: -10rem;
+}
+.list2 {
+  position: relative;
+  right: 20rem;
+}
+.list3 {
+  position: relative;
+  right: 32rem;
+  top: 2rem;
+}
+
+.btn-placing {
+  position: relative;
+  bottom: 7rem;
+  left: 13rem;
+}
+.text-placing {
+  position: relative;
+  bottom: 9rem;
+  left: 36rem;
+}
+
+@media (max-width: 2000px) {
+  .clear-cart {
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .list {
+    position: relative;
+    left: -7rem;
+  }
+  .list2 {
+    position: relative;
+    right: 19rem;
+  }
+  .list3 {
+    position: relative;
+    right: 32rem;
+    top: 2rem;
+  }
+
+  .btn-placing {
+    position: relative;
+    bottom: 7rem;
+    left: 12.5rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 9rem;
+    left: 33rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 7rem;
+    right: 10rem;
+  }
+}
+@media (max-width: 1200px) {
+  .list {
+    position: relative;
+    left: -11rem;
+  }
+  .list2 {
+    position: relative;
+    right: 19rem;
+  }
+  .list3 {
+    position: relative;
+    right: 27rem;
+    top: 2rem;
+  }
+
+  .btn-placing {
+    position: relative;
+    bottom: 7rem;
+    left: 11rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 9rem;
+    left: 31rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 7rem;
+    right: 7rem;
+  }
+}
+
+@media (max-width: 1140px) {
+  .list {
+    position: relative;
+    left: -9rem;
+  }
+  .list2 {
+    position: relative;
+    right: 17rem;
+  }
+  .list3 {
+    position: relative;
+    right: 27rem;
+    top: 2rem;
+  }
+
+  .btn-placing {
+    position: relative;
+    bottom: 7rem;
+    left: 11rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 9rem;
+    left: 29rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 7rem;
+    right: 7rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .list {
+    position: relative;
+    left: -6rem;
+  }
+  .list2 {
+    position: relative;
+    right: 15rem;
+  }
+  .list3 {
+    position: relative;
+    right: 25rem;
+    top: 2rem;
+  }
+
+  .btn-placing {
+    position: relative;
+    bottom: 7rem;
+    left: 11rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 9rem;
+    left: 27rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 7rem;
+    right: 9rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .my-style {
+    visibility: hidden;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .list {
+    position: relative;
+    left: 14rem;
+  }
+  .list2 {
+    position: relative;
+    left: 1rem;
+  }
+  .list3 {
+    position: relative;
+    left: 1rem;
+    top: 0;
+  }
+
+  .btn-placing {
+    position: relative;
+    top: 0;
+    left: 1rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 0;
+    left: 1.2rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 0rem;
+    left: 1rem;
+  }
+  .clear-cart {
+    margin-right: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-style {
+    visibility: hidden;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .list {
+    position: relative;
+    left: 14rem;
+  }
+  .list2 {
+    position: relative;
+    left: 1rem;
+  }
+  .list3 {
+    position: relative;
+    left: 1rem;
+    top: 0;
+  }
+
+  .btn-placing {
+    position: relative;
+    top: 0;
+    left: 1rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 0;
+    left: 1.2rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 0rem;
+    left: 1rem;
+  }
+  .clear-cart {
+    margin-right: 15rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .clear-cart {
+    margin-right: 8.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .list {
+    left: 9rem;
+  }
+  .clear-cart {
+    margin-right: 9rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .my-style {
+    visibility: hidden;
+  }
+
+  .general {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .list {
+    position: relative;
+    left: 8rem;
+  }
+  .list2 {
+    position: relative;
+    left: 1rem;
+  }
+  .list3 {
+    position: relative;
+    left: 1rem;
+    top: 0;
+  }
+
+  .btn-placing {
+    position: relative;
+    top: 0;
+    left: 1rem;
+  }
+  .text-placing {
+    position: relative;
+    bottom: 0;
+    left: 1.2rem;
+  }
+
+  .cart-icon {
+    position: relative;
+    bottom: 0rem;
+    left: 1rem;
+  }
+  .clear-cart {
+    margin-right: 6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .list {
+    left: 6rem;
+  }
+  .clear-cart {
+    margin-right: 5rem;
+  }
+}

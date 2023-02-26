@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.checkout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout__title {
+  padding: 10px;
+  border-bottom: 1px solid #ff4747;
+  margin-top: 6rem;
+  margin-left: 2rem;
+}
+
+.checkout-right {
+  margin: 5% 2rem 0 0;
+}
+
+.checkout-right h2 {
+  margin-top: 6rem;
+  margin-right: 2rem;
+}

@@ -1,0 +1,520 @@
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.a:hover {
+  color: #ff4747;
+  transition: all ease-in 0.5s;
+}
+
+.dropdown1 {
+  font-family: "klee-one";
+  font-size: 14px;
+  padding: 0 20px;
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  width: 15rem;
+  margin-top: 22px;
+  z-index: 2;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+}
+
+.category1 {
+  position: absolute;
+  left: 0;
+  margin-bottom: 15rem;
+  background-color: #f2f2f2;
+  width: 100%;
+  text-align: left;
+}
+
+p {
+  font-family: "klee-one";
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0 0;
+}
+
+.list {
+  display: flex;
+  padding: 8px 12px;
+  font-size: 1rem;
+}
+
+.icons1 {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.icons1:hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+
+li:nth-child(1):hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+li:nth-child(2):hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+li:nth-child(3):hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+li:nth-child(5):hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+li:nth-child(10):hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+
+span:hover {
+  color: #ff4747;
+  cursor: pointer;
+  transition: all ease-in 0.5s;
+}
+
+.info-tab {
+  font-family: "klee-one";
+  width: 60%;
+  height: 3.5rem;
+  background-color: #fff;
+  font-size: 12px;
+  position: absolute;
+  top: 5rem;
+  left: 27.5%;
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+.info-tab .first {
+  font-size: 20px;
+  font-weight: 900;
+  margin: 8px 0 0 8px;
+}
+
+.icon {
+  color: #f15a22;
+  font-size: 25px;
+  margin-right: 3px;
+}
+
+.info-1 {
+  width: 100%;
+  height: 100%;
+  padding-left: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.white-card {
+  width: 17%;
+  height: 30vh;
+  position: absolute;
+  top: 10rem;
+  left: 70%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  background-color: #fff;
+  color: black;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.white-card p {
+  font-size: 17px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.option {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.option .Join {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background-image: linear-gradient(100deg, #ff6025, #ff4747);
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.option .sign {
+  width: 6rem;
+  height: 2.5rem;
+  padding-top: 7px;
+  position: relative;
+  bottom: 0;
+  border: none;
+  background-color: #f9f9f9;
+  color: black;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.option .text {
+  font-size: 15px;
+  position: relative;
+  bottom: 20px;
+}
+
+.super-deals {
+  background-color: #fff;
+  width: 59%;
+  height: 60vh;
+  position: absolute;
+  bottom: -7rem;
+  left: 23.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+
+.super-deals div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.super-deals h2 {
+  padding: 10px 0 10px 30px;
+}
+
+.super-deals span {
+  color: red;
+}
+
+.super-deals div a {
+  text-decoration: none;
+  color: #cccaca;
+  font-size: 20px;
+  padding: 10px 30px 10px 0;
+}
+
+.super-deals div a:hover {
+  color: #ff4747;
+  transition: all ease-in 0.5s;
+}
+
+.super-deals p {
+  text-align: left;
+  font-size: 15px;
+  padding: 0 30px;
+}
+
+.images div {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.images img {
+  margin: 30px 20px 10px 20px;
+  width: 15vw;
+}
+
+.product-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: absolute;
+  top: 47rem;
+  left: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.product {
+  flex: 1 1 10rem;
+  width: 10%;
+  height: 50vh;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+h5 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.product:hover {
+  transform: scale(1.1);
+  border: 2px solid #f15a22;
+  transition: all ease-in 0.5s;
+}
+
+.product img {
+  width: 7rem;
+  object-fit: cover;
+}
+.Pop-up-div.active {
+  width: 40rem;
+  height: 80vh;
+  position: absolute;
+  bottom: 1rem;
+  left: 26rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  z-index: 1000;
+  border-radius: 0.3rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all ease-in 2s;
+  animation: animate normal 1s ease-in;
+}
+
+@keyframes animate {
+  0% {
+    filter: blur(20px);
+    transition: all ease-in 2s;
+  }
+  100% {
+    filter: blur(0px);
+    transition: all ease-in 2s;
+  }
+}
+
+.x-mark {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 30px;
+  cursor: pointer;
+  color: red;
+}
+
+.Pop-up-div {
+  display: none;
+}
+
+.options {
+  width: 70%;
+  height: 15%;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.options .text {
+  font-size: 18px;
+  position: relative;
+  bottom: 20px;
+}
+
+.options:hover {
+  background-color: #f2f2f2;
+  transition: all ease-in 0.3s;
+}
+
+.icon1 {
+  color: orangered;
+}
+
+.icon2 {
+  color: blue;
+  font-size: 25px;
+  margin-right: 3px;
+}
+.icon3 {
+  color: rgb(0, 89, 255);
+  font-size: 25px;
+  margin-right: 3px;
+}
+
+.Pop-up-div p {
+  color: black;
+}
+
+.Pop-up-div a {
+  font-size: 20px;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  top: 145rem;
+  background-color: #fff;
+}
+
+.Category-2 {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .white-card {
+    width: 20%;
+    left: 73%;
+  }
+
+  .super-deals {
+    width: 70%;
+    position: relative;
+    top: 12rem;
+    left: 17rem;
+  }
+}
+
+@media (max-width: 1075px) {
+  .info-tab {
+    left: 23rem;
+  }
+  .white-card {
+    width: 20%;
+    left: 77%;
+  }
+
+  .option {
+    position: absolute;
+    bottom: 2rem;
+    gap: 20px;
+  }
+  .option .Join {
+    padding: 0.2rem 1.4rem;
+  }
+  .option .sign {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 1041px) {
+  .info-tab {
+    left: 23rem;
+  }
+  .white-card {
+    left: 78%;
+  }
+
+  .option {
+    gap: 18px;
+  }
+  .option .Join {
+    padding: 0.2rem 1.4rem;
+  }
+  .option .sign {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 1029px) {
+  .info-tab {
+    left: 23rem;
+  }
+  .white-card {
+    left: 78%;
+  }
+
+  .option {
+    gap: 15px;
+  }
+  .option .Join {
+    padding: 0.2rem 1.4rem;
+  }
+  .option .sign {
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .info-tab {
+    left: 23rem;
+  }
+  .white-card {
+    display: none;
+  }
+}
+
+@media (max-width: 915px) {
+  .info-tab {
+    width: 50rem;
+    left: 0;
+    top: 10rem;
+    margin-left: 3rem;
+    margin-top: 10rem;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 50rem;
+    left: 0;
+    bottom: -35rem;
+    margin-left: 3rem;
+  }
+
+  .Category-2 {
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cat-container {
+    width: 100%;
+    flex: 1 1 15rem;
+  }
+
+  .Image {
+    flex: 1 1 12rem;
+  }
+}

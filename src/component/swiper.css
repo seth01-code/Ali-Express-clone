@@ -1,0 +1,57 @@
+.swiper {
+  width: 40%;
+  height: 30vh;
+  border-radius: 0.3rem;
+  position: relative;
+  top: 10rem;
+  overflow: hidden;
+  z-index: -100000;
+  right: 2rem;
+}
+
+.swiper-button-next {
+  background-image: url(../images/right-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev {
+  background-image: url(../images/left-arrow.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1075px) {
+  .swiper {
+    width: 35%;
+    right: -2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .swiper {
+    width: 58%;
+    right: -11rem;
+  }
+}
+
+@media (max-width: 915px) {
+  .swiper {
+    display: none;
+  }
+}
