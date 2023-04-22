@@ -1,12 +1,9 @@
 .swiper {
-  width: 40%;
+  width: 70%;
   height: 30vh;
   border-radius: 0.3rem;
-  position: relative;
-  top: 10rem;
   overflow: hidden;
   z-index: -100000;
-  right: 2rem;
 }
 
 .swiper-button-next {
@@ -36,22 +33,39 @@
   object-fit: cover;
 }
 
+@media (max-width: 1200px) {
+  .swiper {
+    width: 50%;
+    height: 27vh;
+  }
+}
+
 @media (max-width: 1075px) {
   .swiper {
-    width: 35%;
-    right: -2rem;
+    width: 60%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .swiper {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1029px) {
+  .swiper {
+    width: 60%;
   }
 }
 
 @media (max-width: 1000px) {
   .swiper {
     width: 58%;
-    right: -11rem;
   }
 }
 
 @media (max-width: 915px) {
   .swiper {
-    display: none;
+    width: 100%;
   }
 }

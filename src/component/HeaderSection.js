@@ -3,74 +3,30 @@ import { Link } from "react-router-dom";
 import "./header.css";
 import Image from "../images/Aliexpress_logo_PNG2.png";
 import { FaBars } from "react-icons/fa";
-import { GiLargeDress } from "react-icons/gi";
-import { IoShirtOutline } from "react-icons/io5";
-import { BsPhone } from "react-icons/bs";
-import { IoIosLaptop } from "react-icons/io";
+import { BiCategory } from "react-icons/bi";
 import { IoIosContact } from "react-icons/io";
-import { TfiCamera } from "react-icons/tfi";
-import { GiBigDiamondRing } from "react-icons/gi";
-import { IoBasketballOutline } from "react-icons/io5";
-import { MdOutlineChair } from "react-icons/md";
-import { BsHandbag } from "react-icons/bs";
-import { GiBabyBottle } from "react-icons/gi";
-import { GiMirrorMirror } from "react-icons/gi";
 import { RiSearch2Line } from "react-icons/ri";
 import { HiOutlineShoppingCart } from "react-icons/hi";
+import { HiXMark } from "react-icons/hi2";
 
 function HeaderSection() {
-  const [isShown, setIsShown] = useState(false);
+  const [click, setClick] = useState(false);
 
-  const [counter, setCounter] = useState(0);
-  const incrementCounter = () => setCounter(counter + 1);
-  let decrementCounter = () => setCounter(counter - 1);
-  if (counter <= 0) {
-    decrementCounter = () => setCounter(1);
-  }
+  const handleClick = () => setClick(!click);
+
+  const closeMobileMenu = () => setClick(false);
 
   return (
     <>
-      <div className="header-container">
+      <div className="header-container1">
         <Link to="/">
           <div className="header-logo">
             <img src={Image} alt="" />
           </div>
         </Link>
-        <div className="container">
-          <button
-            type="button"
-            className="button"
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-          >
-            {/* <ImMenu3 /> */}
-          </button>
-          {isShown && (
-            <div
-              className="dropdown"
-              onMouseEnter={() => setIsShown(true)}
-              onMouseLeave={() => setIsShown(false)}
-            >
-              <div className="category">
-                <p>Categories</p>
-              </div>
-              <ul>
-                <Link to="women's-fashion">
-                  <li>
-                    <div className="icons">
-                      <GiLargeDress />
-                    </div>
-                    Products
-                  </li>
-                </Link>
-              </ul>
-            </div>
-          )}
-        </div>
         <div className="input-section">
           <input
             className="input1"
-            onClick={incrementCounter}
             type="text"
             placeholder="Iphone 11 pro max case"
           />
@@ -78,21 +34,30 @@ function HeaderSection() {
             <RiSearch2Line />
           </div>
         </div>
-        <Link exact to="/my-cart">
+        <Link to="/women's-fashion">
+          <div className="icon icon-area">
+            <BiCategory />
+            <p className="text-blue">Products</p>
+          </div>
+        </Link>
+        <Link to="/my-cart">
           <div className="cart">
             <HiOutlineShoppingCart className="icon" />
-            <div className="floating-number">
-              <p className="number">{counter}</p>
-            </div>
           </div>
         </Link>
       </div>
-
+      {/* mobile header */}
       <section className="heading">
         <div className="header-cont">
           <div className="nav-logo">
-            <div className="ham">
+            <div className="ham" onClick={handleClick}>
               <FaBars />
+            </div>
+            <div
+              className={click ? "menu-icon inactive" : "menu-icon"}
+              onClick={closeMobileMenu}
+            >
+              <HiXMark />
             </div>
             <Link to="/">
               <div className="header-logo">
@@ -100,26 +65,56 @@ function HeaderSection() {
               </div>
             </Link>
           </div>
-          <Link exact to="/my-cart">
-            <div className="cart1">
-              <HiOutlineShoppingCart />
-              <IoIosContact />
-              <div>
-                <p>{counter}</p>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/women's-fashion"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                Join
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/sign-in"
+                className="nav-links-mobile"
+                onClick={closeMobileMenu}
+              >
+                Sign In
+              </Link>
+            </li>
+          </ul>
+          <div className="cart1">
+            <Link exact to="/my-cart">
+              <div className="cart-2">
+                <HiOutlineShoppingCart />
               </div>
+            </Link>
+          </div>
+          <div className="cart-2">
+            <div className="icons">
+              <IoIosContact />
             </div>
-          </Link>
+          </div>
         </div>
         <div className="input-section1">
-          <input
-            onClick={incrementCounter}
-            type="text"
-            placeholder="Iphone 11 pro max case"
-          />
+          <input type="text" placeholder="Iphone 11 pro max case" />
           <div>
             <RiSearch2Line />
           </div>
         </div>
+        {/* <div className="user"></div> */}
       </section>
     </>
   );

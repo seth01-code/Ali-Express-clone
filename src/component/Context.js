@@ -1,5 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useReducer, useContext, createContext } from "react";
 import { data, detail } from "../WomenData";
+
+// prepares the data layer
+// export const StateContext = createContext();
+
+// wrap our app and provides the data layer
+
+// export const StateProvider = ({ reducer, initialState, children }) => (
+//   <StateContext.Provider value={useReducer(reducer, initialState)}>
+//     {children}
+//   </StateContext.Provider>
+// );
+
+// pull information from the data layer
+// export const useStateValue = () => useContext(StateContext);
 
 const ProductContext = React.createContext();
 
@@ -13,6 +27,7 @@ export default class ProductProvider extends Component {
     cartSubTotal: 0,
     cartTax: 0,
     cartTotal: 0,
+    user: null,
   };
 
   componentDidMount() {
@@ -121,7 +136,7 @@ export default class ProductProvider extends Component {
     let tempProducts = [...this.state.products];
     let tempCart = [...this.state.cart];
 
-    tempCart = tempCart.filter((item) => item.id != id);
+    tempCart = tempCart.filter((item) => item.id !== id);
 
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];

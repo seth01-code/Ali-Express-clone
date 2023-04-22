@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ProductConsumer } from "./Context";
 import { ButtonContainer } from "./Button";
 import { Link } from "react-router-dom";
-import { FaRegCaretSquareDown } from "react-icons/fa";
 
 export default class Modal extends Component {
   render() {
@@ -55,7 +54,7 @@ export default class Modal extends Component {
   }
 }
 
-const ModalContainer = styled.div`
+export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0;

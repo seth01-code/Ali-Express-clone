@@ -19,6 +19,7 @@ import Modal from "./component/Modal";
 
 function App() {
   useEffect(() => {
+    // will only run once when the app component loads...
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       console.log("the user is >>>", user);
@@ -43,7 +44,7 @@ function App() {
             <Route path="/details" element={<Details />} />
             <Route path="/sign-in" element={<SignUp />} />
             <Route path="/my-cart" element={<Checkout />} />
-            <Route element={<Default />} />
+            <Route element={Default} />
           </Routes>
           <Modal />
         </div>

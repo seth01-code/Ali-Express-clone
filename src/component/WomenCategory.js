@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { ProductConsumer } from "./Context";
 import HeaderSection from "./HeaderSection";
 import Product from "./Product";
+import Title from "./Title";
 
 export default class WomenCategory extends Component {
   render() {
@@ -11,7 +12,7 @@ export default class WomenCategory extends Component {
         <React.Fragment>
           <div className="py-5">
             <div className="container">
-              <h2 className="mt-5">Our Products</h2>
+              <Title name="our" title="products" />
               <div className="row">
                 <ProductConsumer>
                   {(value) => {

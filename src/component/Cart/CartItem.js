@@ -6,7 +6,7 @@ export default function CartItem({ item, value }) {
   const { increment, decrement, removeItem } = value;
 
   return (
-    <div className=" general row my-3 text-capitalize text-center">
+    <div className="  row my-3 text-capitalize text-center">
       <div className="list col-10 mx-auto col-lg-2">
         <img
           src={image}
@@ -31,11 +31,11 @@ export default function CartItem({ item, value }) {
       <div className="col-10 mx-auto clo-lg-2 my-2 my-lg-0">
         <div className="d-flex justify-content-center">
           <div className="btn-placing">
-            <span className="btn btn-black mx-1" onClick={() => decrement(id)}>
+            <span className=" btn-black mx-1" onClick={() => decrement(id)}>
               -
             </span>
-            <span className="btn btn-black mx-1">{count}</span>
-            <span className="btn btn-black mx-1" onClick={() => increment(id)}>
+            <span className="btn-black mx-1">{count}</span>
+            <span className="btn-black mx-1" onClick={() => increment(id)}>
               +
             </span>
           </div>

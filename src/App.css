@@ -38,6 +38,7 @@
 }
 
 .btn-black {
+  padding: 10px 1rem 10px 1rem;
   background: transparent;
   text-transform: capitalize;
   font-size: 0.8rem !important;
@@ -60,13 +61,25 @@
   right: 8rem;
 }
 
+body {
+  font-family: "Oswald", "sans-serif" !important;
+  overflow-x: hidden;
+}
+
 .clear-cart {
+  padding: 10px 10px;
+  border-radius: 0.3rem;
+  border: 1px solid red;
+  background-color: transparent;
   width: 13rem;
-  margin-left: 10rem;
+  position: relative;
+  /* margin-left: 10rem; */
 }
 
 .clear-cart:hover {
   transition: all 1s linear;
+  background-color: red;
+  color: #fff;
 }
 
 .list {
@@ -94,10 +107,27 @@
   left: 36rem;
 }
 
+.text-title {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.text-blue {
+  color: #f15a22;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.small-text {
+  font-size: 0.9em;
+}
+
 @media (max-width: 2000px) {
   .clear-cart {
-    position: absolute;
-    right: 0;
+    right: -95%;
   }
 }
 
@@ -132,6 +162,9 @@
     bottom: 7rem;
     right: 10rem;
   }
+  .clear-cart {
+    right: -95%;
+  }
 }
 @media (max-width: 1200px) {
   .list {
@@ -163,6 +196,9 @@
     position: relative;
     bottom: 7rem;
     right: 7rem;
+  }
+  .clear-cart {
+    right: -95%;
   }
 }
 
@@ -197,15 +233,23 @@
     bottom: 7rem;
     right: 7rem;
   }
+  .clear-cart {
+    right: -95%;
+  }
 }
 
 @media (max-width: 1100px) {
+  .general-list {
+    font-size: 1em;
+  }
+
   .list {
     position: relative;
     left: -6rem;
   }
   .list2 {
     position: relative;
+    text-align: left;
     right: 15rem;
   }
   .list3 {
@@ -230,6 +274,9 @@
     bottom: 7rem;
     right: 9rem;
   }
+  .clear-cart {
+    right: -90%;
+  }
 }
 
 @media (max-width: 991px) {
@@ -247,11 +294,11 @@
 
   .list {
     position: relative;
-    left: 14rem;
+    left: 0;
   }
   .list2 {
     position: relative;
-    left: 1rem;
+    left: 4rem;
   }
   .list3 {
     position: relative;
@@ -260,23 +307,24 @@
   }
 
   .btn-placing {
-    position: relative;
     top: 0;
     left: 1rem;
   }
   .text-placing {
-    position: relative;
     bottom: 0;
     left: 1.2rem;
   }
 
   .cart-icon {
-    position: relative;
     bottom: 0rem;
     left: 1rem;
   }
   .clear-cart {
-    margin-right: 15rem;
+    margin-left: 17rem;
+    position: initial;
+  }
+  .btn-black {
+    width: 30px;
   }
 }
 
@@ -295,27 +343,16 @@
 
   .list {
     position: relative;
-    left: 14rem;
+    left: 1rem;
   }
   .list2 {
     position: relative;
-    left: 1rem;
+    left: 3rem;
   }
   .list3 {
     position: relative;
     left: 1rem;
     top: 0;
-  }
-
-  .btn-placing {
-    position: relative;
-    top: 0;
-    left: 1rem;
-  }
-  .text-placing {
-    position: relative;
-    bottom: 0;
-    left: 1.2rem;
   }
 
   .cart-icon {
@@ -324,22 +361,14 @@
     left: 1rem;
   }
   .clear-cart {
-    margin-right: 15rem;
+    margin-left: 11rem;
+    position: initial;
   }
 }
 
 @media (max-width: 540px) {
   .clear-cart {
     margin-right: 8.5rem;
-  }
-}
-
-@media (max-width: 720px) {
-  .list {
-    left: 9rem;
-  }
-  .clear-cart {
-    margin-right: 9rem;
   }
 }
 
@@ -358,11 +387,11 @@
 
   .list {
     position: relative;
-    left: 8rem;
+    left: 1rem;
   }
   .list2 {
     position: relative;
-    left: 1rem;
+    left: 3rem;
   }
   .list3 {
     position: relative;
@@ -387,15 +416,20 @@
     left: 1rem;
   }
   .clear-cart {
-    margin-right: 6rem;
+    margin-left: 8rem;
   }
 }
 
 @media (max-width: 400px) {
   .list {
-    left: 6rem;
+    left: 1rem;
   }
   .clear-cart {
-    margin-right: 5rem;
+    margin-left: 6rem;
+  }
+}
+@media (max-width: 300px) {
+  .clear-cart {
+    margin-left: 2.5rem;
   }
 }

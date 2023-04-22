@@ -3,7 +3,7 @@ import { ProductConsumer } from "./Context";
 import { Link } from "react-router-dom";
 import { ButtonContainer } from "./Button";
 import { detail } from "../WomenData";
-import DetailConsumer from "./DetailConsumer.js";
+import Title from "./Title";
 
 export default class Details extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class Details extends Component {
               {/* title */}
               <div className="row">
                 <div className="col-10 mx-auto text-center text-slanted text-blue my-5">
-                  <h1>{title}</h1>
+                  <Title title={title} />
                 </div>
               </div>
               {/* end title */}
@@ -35,7 +35,7 @@ export default class Details extends Component {
                   <p className="text-capitalize font-weight-bold mt-3 mb-0">
                     some info about the product:
                   </p>
-                  <p className="text-muted lead">{details}</p>
+                  <p className="text-muted lead text-left">{details}</p>
                   <div>
                     <Link to="/women's-fashion">
                       <ButtonContainer>back to products</ButtonContainer>

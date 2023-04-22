@@ -4,6 +4,8 @@ import EmptyCart from "./EmptyCart.js";
 import { ProductConsumer } from "../Context.js";
 import CartList from "./CartList.js";
 import CartTotals from "./CartTotals.js";
+import Title from "../Title";
+import HeaderSection from "../HeaderSection";
 
 export default class Checkout extends Component {
   render() {
@@ -15,7 +17,8 @@ export default class Checkout extends Component {
             if (cart.length > 0) {
               return (
                 <React.Fragment>
-                  <h2>Your Cart</h2>
+                  <HeaderSection />
+                  <Title title="your cart" />
                   <CartColumns />
                   <CartList value={value} />
                   <CartTotals value={value} history={this.props.history} />

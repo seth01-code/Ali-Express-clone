@@ -16,102 +16,44 @@
   transition: all ease-in 0.5s;
 }
 
-.dropdown1 {
-  font-family: "klee-one";
-  font-size: 14px;
-  padding: 0 20px;
-  position: absolute;
-  top: 4rem;
-  left: 2rem;
-  width: 15rem;
-  margin-top: 22px;
-  z-index: 2;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
-}
-
-.category1 {
-  position: absolute;
-  left: 0;
-  margin-bottom: 15rem;
-  background-color: #f2f2f2;
-  width: 100%;
-  text-align: left;
-}
-
-p {
-  font-family: "klee-one";
-  font-size: 20px;
-  padding-top: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 2.5rem 0 0 0;
-}
-
-.list {
+.general-container {
   display: flex;
-  padding: 8px 12px;
-  font-size: 1rem;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
 }
 
-.icons1 {
-  font-size: 20px;
-  margin-right: 10px;
+.swiper-area {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 12rem;
+  margin-top: 10rem;
 }
 
-.icons1:hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-
-li:nth-child(1):hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-li:nth-child(2):hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-li:nth-child(3):hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-li:nth-child(5):hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-li:nth-child(10):hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
-}
-
-span:hover {
-  color: #ff4747;
-  cursor: pointer;
-  transition: all ease-in 0.5s;
+.pos-swiper {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: 10rem;
 }
 
 .info-tab {
   font-family: "klee-one";
-  width: 60%;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 0;
   height: 3.5rem;
   background-color: #fff;
   font-size: 12px;
-  position: absolute;
-  top: 5rem;
-  left: 27.5%;
   border-radius: 0.5rem;
   display: flex;
+  position: relative;
+  left: 10rem;
+  top: 4rem;
 }
 
 .info-tab .first {
@@ -139,8 +81,6 @@ span:hover {
   width: 17%;
   height: 30vh;
   position: absolute;
-  top: 10rem;
-  left: 70%;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -193,12 +133,9 @@ span:hover {
 }
 
 .super-deals {
-  background-color: #fff;
-  width: 59%;
+  width: 90%;
   height: 60vh;
-  position: absolute;
-  bottom: -7rem;
-  left: 23.5rem;
+  margin: 5rem 0 2rem 10rem;
   display: flex;
   flex-direction: column;
   border-radius: 0.5rem;
@@ -220,9 +157,9 @@ span:hover {
 
 .super-deals div a {
   text-decoration: none;
-  color: #cccaca;
+  color: #bebebe;
   font-size: 20px;
-  padding: 10px 30px 10px 0;
+  padding: 10px 80px 10px 0;
 }
 
 .super-deals div a:hover {
@@ -301,9 +238,9 @@ p {
 .Pop-up-div.active {
   width: 40rem;
   height: 80vh;
-  position: absolute;
-  bottom: 1rem;
-  left: 26rem;
+  position: fixed;
+  bottom: 2rem;
+  left: 20rem;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -330,9 +267,9 @@ p {
 }
 
 .x-mark {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  position: relative;
+  top: 0;
+  left: 15rem;
   font-size: 30px;
   cursor: pointer;
   color: red;
@@ -384,97 +321,230 @@ p {
   font-size: 20px;
 }
 
-.footer {
+.footer-class {
   width: 100%;
-  position: absolute;
-  top: 145rem;
-  background-color: #fff;
+  height: 100%;
 }
 
 .Category-2 {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 2000px) {
+  .info-tab {
+    position: absolute;
+  }
+  .super-deals {
+    position: relative;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 1240px) {
   .white-card {
     width: 20%;
-    left: 73%;
+  }
+  .option {
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .info-tab {
+    left: 2rem;
+  }
+
+  .swiper-area {
+    margin-left: 4rem;
+  }
+
+  .white-card {
+    width: 25%;
+    height: 27vh;
+  }
+
+  .white-card p {
+    font-size: 1.2em;
+  }
+
+  .option {
+    margin-left: 1rem;
+  }
+
+  .option .Join,
+  .option .sign {
+    width: 7rem;
+    gap: 0;
+  }
+
+  .option .text {
+    font-size: 1.2rem;
+    bottom: 27px;
   }
 
   .super-deals {
-    width: 70%;
+    width: 82%;
     position: relative;
-    top: 12rem;
-    left: 17rem;
+    top: 0;
+    left: -5rem;
   }
 }
 
 @media (max-width: 1075px) {
   .info-tab {
-    left: 23rem;
+    left: 3rem;
   }
+
+  .swiper-area {
+    margin-left: 7rem;
+    max-width: 1000px;
+  }
+
   .white-card {
-    width: 20%;
-    left: 77%;
+    width: 23%;
+    height: 27vh;
   }
 
   .option {
-    position: absolute;
-    bottom: 2rem;
-    gap: 20px;
+    margin-left: 0;
+    position: relative;
+    bottom: 1rem;
   }
   .option .Join {
-    padding: 0.2rem 1.4rem;
+    width: 6rem;
+    position: relative;
+    bottom: 12px;
   }
   .option .sign {
-    padding: 0.6rem 1.2rem;
+    width: 5.5rem;
+    position: relative;
+    bottom: 12px;
+  }
+  .option .text {
+    font-size: 1.2em;
+    bottom: 18px;
+  }
+
+  .Pop-up-div.active {
+    left: 11rem;
   }
 }
 
 @media (max-width: 1041px) {
-  .info-tab {
-    left: 23rem;
+  .swiper-area {
+    margin-left: 6rem;
+    max-width: 1000px;
   }
+
   .white-card {
-    left: 78%;
+    width: 23%;
+    height: 27vh;
   }
 
   .option {
-    gap: 18px;
+    margin-left: 5px;
+    gap: 5px;
+    position: relative;
+    bottom: 1rem;
   }
   .option .Join {
-    padding: 0.2rem 1.4rem;
+    width: 6rem;
+    position: relative;
+    bottom: 12px;
   }
   .option .sign {
-    padding: 0.6rem 1.2rem;
+    width: 6rem;
+    position: relative;
+    bottom: 12px;
+  }
+  .option .text {
+    font-size: 1.3em;
+    bottom: 18px;
   }
 }
 
 @media (max-width: 1029px) {
   .info-tab {
-    left: 23rem;
+    left: 3rem;
   }
+
+  .swiper-area {
+    position: relative;
+    margin-left: 0;
+    max-width: 1000px;
+  }
+
   .white-card {
-    left: 78%;
+    position: absolute;
+    left: 6rem;
+  }
+
+  .white-card p {
+    font-size: 1em;
   }
 
   .option {
-    gap: 15px;
+    margin-left: 5px;
+    gap: 0;
   }
   .option .Join {
-    padding: 0.2rem 1.4rem;
+    width: 6rem;
   }
   .option .sign {
-    padding: 0.6rem 1.2rem;
+    position: relative;
+    bottom: 12px;
+  }
+  .option .text {
+    font-size: 1rem;
+    bottom: 16px;
+  }
+  .super-deals {
+    width: 80%;
+    position: relative;
+    top: 0;
+    left: -5rem;
   }
 }
 
 @media (max-width: 1000px) {
   .info-tab {
-    left: 23rem;
+    left: 3rem;
   }
+
+  .swiper-area {
+    position: relative;
+    margin-left: 0;
+  }
+
   .white-card {
-    display: none;
+    position: absolute;
+    left: 6rem;
+  }
+
+  .white-card p {
+    font-size: 1em;
+  }
+
+  .option {
+    margin-left: 5px;
+    gap: 0;
+  }
+  .option .Join {
+    width: 6rem;
+  }
+  .option .sign {
+    position: relative;
+    bottom: 12px;
+  }
+  .option .text {
+    font-size: 1rem;
+    bottom: 16px;
+  }
+  .super-deals {
+    width: 80%;
+    position: relative;
+    top: 0;
+    left: -5rem;
   }
 }
 
@@ -482,9 +552,13 @@ p {
   .info-tab {
     width: 50rem;
     left: 0;
-    top: 10rem;
+    position: absolute;
     margin-left: 3rem;
     margin-top: 10rem;
+  }
+
+  .pos-swiper {
+    display: none;
   }
 
   .dropdown1 {
@@ -498,23 +572,388 @@ p {
   .super-deals {
     width: 50rem;
     left: 0;
-    bottom: -35rem;
     margin-left: 3rem;
   }
 
-  .Category-2 {
-    width: 100%;
-    height: 50rem;
-    display: flex;
-    flex-wrap: wrap;
+  .Pop-up-div.active {
+    left: 8rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .info-tab {
+    width: 45rem;
+    left: 0;
+    position: absolute;
+    margin-left: 3rem;
+    margin-top: 10rem;
   }
 
-  .cat-container {
-    width: 100%;
-    flex: 1 1 15rem;
+  .pos-swiper {
+    display: none;
   }
 
-  .Image {
-    flex: 1 1 12rem;
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 45rem;
+    left: 0;
+    margin-left: 3rem;
+  }
+
+  .Pop-up-div.active {
+    left: 5rem;
+  }
+}
+
+@media (max-width: 740px) {
+  .info-tab {
+    width: 40rem;
+    left: 0;
+    position: absolute;
+    margin-left: 3rem;
+    margin-top: 10rem;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 40rem;
+    left: 0;
+    margin-left: 3rem;
+  }
+
+  .Pop-up-div.active {
+    width: 30rem;
+    height: 70vh;
+    left: 7rem;
+  }
+
+  .options {
+    width: 60%;
+  }
+
+  .options .text {
+    font-size: 14px;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3 {
+    font-size: 20px;
+  }
+  .x-mark {
+    top: 1rem;
+    left: 13rem;
+  }
+
+  .Pop-up-div p {
+    font-size: 16px;
+  }
+
+  .Pop-up-div p a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 695px) {
+  .info-tab {
+    width: 35rem;
+    position: absolute;
+    left: 0;
+    margin-left: 3rem;
+    margin-top: 10rem;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 35rem;
+    left: 0;
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .info-tab {
+    width: 30rem;
+    position: absolute;
+    left: 0;
+    margin-left: 3rem;
+    margin-top: 10rem;
+  }
+
+  .info-tab .first {
+    font-size: 16px;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 30rem;
+    left: 0;
+    margin-left: 3rem;
+  }
+
+  .Pop-up-div.active {
+    width: 30rem;
+    height: 70vh;
+    left: 2rem;
+  }
+}
+
+@media (max-width: 533px) {
+  .Pop-up-div.active {
+    width: 25rem;
+    height: 70vh;
+    left: 4rem;
+  }
+
+  .options {
+    width: 60%;
+  }
+
+  .options .text {
+    font-size: 12px;
+  }
+
+  .icon1,
+  .icon2,
+  .icon3 {
+    font-size: 15px;
+  }
+  .x-mark {
+    top: 1rem;
+    left: 10rem;
+  }
+
+  .Pop-up-div p {
+    font-size: 12px;
+  }
+
+  .Pop-up-div p a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 455px) {
+  .info-tab {
+    width: 25rem;
+    position: absolute;
+    left: 0;
+    margin-left: 2rem;
+    margin-top: 7rem;
+  }
+
+  .info-tab .first {
+    font-size: 12px;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 25rem;
+    left: 0;
+    margin-top: -1rem;
+    margin-left: 2rem;
+  }
+
+  .Pop-up-div.active {
+    width: 25rem;
+    height: 70vh;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .info-tab {
+    width: 25rem;
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    margin-top: 7rem;
+  }
+
+  .info-tab .first {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 15px;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 25rem;
+    left: 0;
+    margin-top: -1rem;
+    margin-left: 0;
+  }
+
+  .Pop-up-div.active {
+    width: 20rem;
+    height: 60vh;
+    left: 2rem;
+  }
+
+  .x-mark {
+    left: 8rem;
+  }
+
+  .Pop-up-div .text1 {
+    position: relative;
+    font-size: 12px;
+    bottom: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .info-tab {
+    display: none;
+  }
+
+  .info-tab .first {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 15px;
+  }
+
+  .pos-swiper {
+    display: none;
+  }
+
+  .dropdown1 {
+    display: none;
+  }
+
+  .white-card {
+    display: none;
+  }
+
+  .super-deals {
+    width: 25rem;
+    left: 0;
+    margin-top: -7rem;
+    margin-left: 0;
+  }
+
+  .super-deals h2 {
+    font-size: 1.2rem;
+    padding: 10px 0 10px 30px;
+  }
+
+  .super-deals span {
+    color: red;
+  }
+
+  .super-deals div a {
+    text-decoration: none;
+    color: #bebebe;
+    font-size: 1rem;
+    padding: 10px 90px 10px 0;
+  }
+
+  .super-deals div a:hover {
+    color: #ff4747;
+    transition: all ease-in 0.5s;
+  }
+
+  .super-deals p {
+    text-align: left;
+    font-size: 13.5px;
+    padding: 0 30px;
+  }
+
+  .super-deals .supe-text {
+    display: none;
+  }
+
+  .images img {
+    margin: 30px 0 10px 16px;
+    width: 15vw;
+  }
+
+  .Pop-up-div.active {
+    width: 15rem;
+    height: 60vh;
+    left: 3rem;
+  }
+
+  .oprions {
+    width: 50%;
+  }
+
+  .options .text {
+    display: none;
+  }
+
+  .x-mark {
+    top: 0;
+    left: 6rem;
+  }
+
+  .Pop-up-div .text1 {
+    position: relative;
+    font-size: 12px;
+    bottom: 1rem;
   }
 }
