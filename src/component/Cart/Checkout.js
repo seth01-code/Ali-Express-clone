@@ -6,9 +6,11 @@ import CartList from "./CartList.js";
 import CartTotals from "./CartTotals.js";
 import Title from "../Title";
 import HeaderSection from "../HeaderSection";
+import { useNavigate } from "react-router-dom";
 
 export default class Checkout extends Component {
   render() {
+    // const history = navigate("*");
     return (
       <section>
         <ProductConsumer>
@@ -18,10 +20,12 @@ export default class Checkout extends Component {
               return (
                 <React.Fragment>
                   <HeaderSection />
-                  <Title title="your cart" />
-                  <CartColumns />
-                  <CartList value={value} />
-                  <CartTotals value={value} history={this.props.history} />
+                  <div className="py-5">
+                    <Title title="your cart" />
+                    <CartColumns />
+                    <CartList value={value} />
+                    <CartTotals value={value} />
+                  </div>
                 </React.Fragment>
               );
             } else {

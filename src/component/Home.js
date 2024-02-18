@@ -86,7 +86,7 @@ function Home() {
             <h2>
               Super<span>Deals</span>
             </h2>
-            <a href="/">View More</a>
+            <Link to="/women's-fashion">View More</Link>
           </div>
           <p>Top Product, incredible prices</p>
           <div className="images">

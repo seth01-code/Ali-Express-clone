@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import Image from "../images/Aliexpress_logo_PNG2.png";
@@ -8,6 +8,8 @@ import { IoIosContact } from "react-icons/io";
 import { RiSearch2Line } from "react-icons/ri";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { HiXMark } from "react-icons/hi2";
+import { AuthContext } from "./Context";
+import { getAuth, signOut } from "firebase/auth";
 
 function HeaderSection() {
   const [click, setClick] = useState(false);
@@ -15,6 +17,21 @@ function HeaderSection() {
   const handleClick = () => setClick(!click);
 
   const closeMobileMenu = () => setClick(false);
+
+  const { user } = useContext(AuthContext);
+
+  const SignOut = (e) => {
+    e.preventDefault();
+
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
 
   return (
     <>
@@ -45,6 +62,20 @@ function HeaderSection() {
             <HiOutlineShoppingCart className="icon" />
           </div>
         </Link>
+        <div className="account">
+          {!!user ? (
+            <div className="user-cont">
+              <p>{`Welcome, ${user.email}`}</p>
+              <div className="user-content">
+                <Link onClick={SignOut}>Sign Out</Link>
+              </div>
+            </div>
+          ) : (
+            <div className="user-content">
+              <Link to="/sign-in">Sign in</Link>
+            </div>
+          )}
+        </div>
       </div>
       {/* mobile header */}
       <section className="heading">
@@ -106,6 +137,20 @@ function HeaderSection() {
             <div className="icons">
               <IoIosContact />
             </div>
+          </div>
+          <div className="account">
+            {!!user ? (
+              <div className="dropdown">
+                <p>{`Welcome, ${user.email}`}</p>
+                <div className="dropdown-content">
+                  <Link to="/">Create Stories</Link>
+                  <Link to="/">My Stories</Link>
+                  <Link onClick={SignOut}>Sign Out</Link>
+                </div>
+              </div>
+            ) : (
+              <Link to="/sign-in">Sign in</Link>
+            )}
           </div>
         </div>
         <div className="input-section1">
